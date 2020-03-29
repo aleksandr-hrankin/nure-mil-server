@@ -1,8 +1,6 @@
 <template>
     <div>
-        <router-link to="/schedule">Расписание</router-link>
-
-        <router-view></router-view>
+        <h1>x</h1>
     </div>
 </template>
 <script>
