@@ -37,10 +37,10 @@ processResources.dependsOn(buildFront)
 repositories {
     mavenCentral()
 }
-
-node {
-    download = true
-}
+//
+//node {
+//    download = true
+//}
 
 dependencies {
     //spring boot

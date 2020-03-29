@@ -6,8 +6,8 @@ import lombok.ToString;
 import javax.persistence.*;
 
 @Entity
-
-@ToString(of = {"id", "lesson", "topic", "dateSchedule", "numberLesson", "surnameTeacher", "nameTeacher", "patronymicTeacher", "buildingClassroom", "cabinetClassroom"})
+@Table
+@ToString(of = {"id", "lessonNumber", "lessonName", "lessonType", "lessonTopic", "teacherSurname", "classroomBuilding", "classroomCabinet", "lessonDate"})
 @EqualsAndHashCode(of = {"id"})
 public class Schedule {
 
@@ -15,16 +15,14 @@ public class Schedule {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String lesson;
-    private String typeLesson;
-    private String topic;
-    private Long dateSchedule;
-    private String numberLesson;
-    private String surnameTeacher;
-    private String nameTeacher;
-    private String patronymicTeacher;
-    private String buildingClassroom;
-    private String cabinetClassroom;
+    private int lessonNumber;
+    private String lessonName;
+    private String lessonType;
+    private String lessonTopic;
+    private String teacherSurname;
+    private String classroomBuilding;
+    private String classroomCabinet;
+    private Long lessonDate;
 
     public Schedule() {
     }
@@ -37,83 +35,67 @@ public class Schedule {
         this.id = id;
     }
 
-    public String getLesson() {
-        return lesson;
+    public int getLessonNumber() {
+        return lessonNumber;
     }
 
-    public void setLesson(String lesson) {
-        this.lesson = lesson;
+    public void setLessonNumber(int lessonNumber) {
+        this.lessonNumber = lessonNumber;
     }
 
-    public String getTypeLesson() {
-        return typeLesson;
+    public String getLessonName() {
+        return lessonName;
     }
 
-    public void setTypeLesson(String typeLesson) {
-        this.typeLesson = typeLesson;
+    public void setLessonName(String lessonName) {
+        this.lessonName = lessonName;
     }
 
-    public String getTopic() {
-        return topic;
+    public String getLessonType() {
+        return lessonType;
     }
 
-    public void setTopic(String topic) {
-        this.topic = topic;
+    public void setLessonType(String lessonType) {
+        this.lessonType = lessonType;
     }
 
-    public Long getDateSchedule() {
-        return dateSchedule;
+    public String getLessonTopic() {
+        return lessonTopic;
     }
 
-    public void setDateSchedule(Long dateSchedule) {
-        this.dateSchedule = dateSchedule;
+    public void setLessonTopic(String lessonTopic) {
+        this.lessonTopic = lessonTopic;
     }
 
-    public String getNumberLesson() {
-        return numberLesson;
+    public String getTeacherSurname() {
+        return teacherSurname;
     }
 
-    public void setNumberLesson(String numberLesson) {
-        this.numberLesson = numberLesson;
+    public void setTeacherSurname(String teacherSurname) {
+        this.teacherSurname = teacherSurname;
     }
 
-    public String getSurnameTeacher() {
-        return surnameTeacher;
+    public String getClassroomBuilding() {
+        return classroomBuilding;
     }
 
-    public void setSurnameTeacher(String surnameTeacher) {
-        this.surnameTeacher = surnameTeacher;
+    public void setClassroomBuilding(String classroomBuilding) {
+        this.classroomBuilding = classroomBuilding;
     }
 
-    public String getNameTeacher() {
-        return nameTeacher;
+    public String getClassroomCabinet() {
+        return classroomCabinet;
     }
 
-    public void setNameTeacher(String nameTeacher) {
-        this.nameTeacher = nameTeacher;
+    public void setClassroomCabinet(String classroomCabinet) {
+        this.classroomCabinet = classroomCabinet;
     }
 
-    public String getPatronymicTeacher() {
-        return patronymicTeacher;
+    public Long getLessonDate() {
+        return lessonDate;
     }
 
-    public void setPatronymicTeacher(String patronymicTeacher) {
-        this.patronymicTeacher = patronymicTeacher;
-    }
-
-    public String getBuildingClassroom() {
-        return buildingClassroom;
-    }
-
-    public void setBuildingClassroom(String buildingClassroom) {
-        this.buildingClassroom = buildingClassroom;
-    }
-
-    public String getCabinetClassroom() {
-        return cabinetClassroom;
-    }
-
-    public void setCabinetClassroom(String cabinetClassroom) {
-        this.cabinetClassroom = cabinetClassroom;
+    public void setLessonDate(Long lessonDate) {
+        this.lessonDate = lessonDate;
     }
 }
