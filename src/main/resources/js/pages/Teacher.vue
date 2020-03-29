@@ -22,13 +22,13 @@
 
             <tr>
                 <td></td>
-                <td><input type="text" v-model="newTeacher.surname"></td>
-                <td><input type="text" v-model="newTeacher.name"></td>
-                <td><input type="text" v-model="newTeacher.patronymic"></td>
-                <td><input type="text" v-model="newTeacher.degree"></td>
-                <td><input type="text" v-model="newTeacher.dob"></td>
-                <td><input type="text" v-model="newTeacher.phoneNumber"></td>
-                <td><input type="text" v-model="newTeacher.photo"></td>
+                <td><input type="text" v-model="newTeacher.surname" @keyup.enter="add"></td>
+                <td><input type="text" v-model="newTeacher.name" @keyup.enter="add"></td>
+                <td><input type="text" v-model="newTeacher.patronymic" @keyup.enter="add"></td>
+                <td><input type="text" v-model="newTeacher.degree" @keyup.enter="add"></td>
+                <td><input type="text" v-model="newTeacher.dob" @keyup.enter="add"></td>
+                <td><input type="text" v-model="newTeacher.phoneNumber" @keyup.enter="add"></td>
+                <td><input type="text" v-model="newTeacher.photo" @keyup.enter="add"></td>
                 <td>
                     <input type="button" value="+" @click="add">
                 </td>

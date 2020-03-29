@@ -18,9 +18,9 @@
 
             <tr>
                 <td></td>
-                <td><input type="text" v-model="newClassroom.building"></td>
-                <td><input type="text" v-model="newClassroom.cabinet"></td>
-                <td><input type="text" v-model="newClassroom.name"></td>
+                <td><input type="text" v-model="newClassroom.building" @keyup.enter="add"></td>
+                <td><input type="text" v-model="newClassroom.cabinet" @keyup.enter="add"></td>
+                <td><input type="text" v-model="newClassroom.name" @keyup.enter="add"></td>
                 <td>
                     <input type="button" value="+" @click="add">
                 </td>

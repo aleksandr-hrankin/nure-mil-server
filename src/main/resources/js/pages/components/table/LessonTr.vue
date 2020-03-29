@@ -12,7 +12,7 @@
     <tr v-else>
         <td>{{lesson.id}}</td>
         <td>
-            <input type="text" v-model="newLesson.name">
+            <input type="text" v-model="newLesson.name" @keyup.enter="update">
         </td>
         <td>
             <input type="button" value="S" @click="update">

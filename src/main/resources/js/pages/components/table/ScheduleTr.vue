@@ -37,7 +37,7 @@
             </select>
         </td>
         <td>
-            <input type="text" v-model="newSchedule.lessonTopic">
+            <input type="text" v-model="newSchedule.lessonTopic" @keyup.enter="update">
         </td>
         <td>
             <select v-model="newSchedule.teacherSurname">

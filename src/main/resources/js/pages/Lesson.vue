@@ -17,7 +17,7 @@
             <tr>
                 <td></td>
                 <td>
-                    <input type="text" v-model="newLesson.name">
+                    <input type="text" v-model="newLesson.name" @keyup.enter="add">
                 </td>
                 <td>
                     <input type="button" value="+" @click="add">

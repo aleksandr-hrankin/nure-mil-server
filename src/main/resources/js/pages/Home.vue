@@ -11,10 +11,6 @@
             <div class="animation start-home"></div>
         </nav>
 
-        <p>
-            By <span>Hrankin Oleksandr</span>
-        </p>
-
         <router-view class="white-text"></router-view>
     </div>
 </template>
